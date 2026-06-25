@@ -1,0 +1,11 @@
+{
+  "description": "Deletes a database-table. CASCADE removes entity_tag rows; soft-FKs are not cascaded — references pointing at the deleted slug are returned in danglingFks[].",
+  "linked_dtos": [],
+  "method": "DELETE",
+  "path": "/database-tables/:slug",
+  "slug": "delete-database-tables-slug",
+  "summary": "Delete a database-table",
+  "tags": [
+    "backend"
+  ]
+}

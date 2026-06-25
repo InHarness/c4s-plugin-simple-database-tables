@@ -1,0 +1,20 @@
+{
+  "description": null,
+  "kind": "edge-case",
+  "slug": "ac-deleting-a-table-cascades-its-entity-tag",
+  "status": "active",
+  "tags": [
+    "backend"
+  ],
+  "text": "Deleting a table CASCADEs its entity_tag rows but does not cascade soft-FKs; dangling references are returned in danglingFks[].",
+  "verifies": [
+    {
+      "slug": "database-table",
+      "type": "database-table"
+    },
+    {
+      "slug": "delete-database-tables-slug",
+      "type": "endpoint"
+    }
+  ]
+}

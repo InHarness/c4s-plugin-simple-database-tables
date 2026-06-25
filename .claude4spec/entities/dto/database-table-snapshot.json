@@ -1,0 +1,60 @@
+{
+  "description": "Full serialized shape of a database-table entity. This is the source-of-truth file format at .claude4spec/entities/database-table/<slug>.json (M29) and the single_element detail payload. restore() UPSERTs by slug from this shape and syncs tags.",
+  "examples": [],
+  "fields": [
+    {
+      "description": "Primary key / identity.",
+      "name": "slug",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Display name.",
+      "name": "name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Optional prose description.",
+      "name": "description",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "description": "Full column list.",
+      "name": "columns",
+      "required": true,
+      "type": "ColumnSpec[]"
+    },
+    {
+      "description": "Full index list.",
+      "name": "indexes",
+      "required": true,
+      "type": "IndexSpec[]"
+    },
+    {
+      "description": "Tag slugs attached to the entity; synced on restore.",
+      "name": "tags",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "description": "ISO creation timestamp.",
+      "name": "created_at",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "description": "ISO last-update timestamp.",
+      "name": "updated_at",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "name": "DatabaseTableSnapshot",
+  "slug": "database-table-snapshot",
+  "tags": [
+    "entity-dto",
+    "serialization"
+  ]
+}

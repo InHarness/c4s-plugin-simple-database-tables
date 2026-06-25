@@ -1,0 +1,18 @@
+{
+  "$schemaVersion": 3,
+  "name": "C4S Plugin - Simple Database Tables",
+  "pagesDir": "pages",
+  "briefsDir": ".claude4spec/briefs",
+  "patchesDir": ".claude4spec/patches",
+  "entitiesDir": ".claude4spec/entities",
+  "writingStyle": null,
+  "language": "English",
+  "onboardingCompleted": true,
+  "remoteApiUrl": null,
+  "remoteProjectId": null,
+  "description": "Projekt pluginu dla C4S tworzony na podstawie dokumentacji C4S Plugin Docs oraz Scaffoldu inicjalnego. Zawiera encje tabel baz danych.",
+  "agent": {
+    "conversationalLanguage": "Polski",
+    "claudeUsePreset": false
+  }
+}

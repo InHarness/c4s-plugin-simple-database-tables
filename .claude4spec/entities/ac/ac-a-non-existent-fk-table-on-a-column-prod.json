@@ -1,0 +1,25 @@
+{
+  "description": null,
+  "kind": "edge-case",
+  "slug": "ac-a-non-existent-fk-table-on-a-column-prod",
+  "status": "active",
+  "tags": [
+    "backend",
+    "serialization"
+  ],
+  "text": "A non-existent fk.table on a column produces a warning in warnings[], not an error, so tables can be created in any order.",
+  "verifies": [
+    {
+      "slug": "database-table",
+      "type": "database-table"
+    },
+    {
+      "slug": "column-spec",
+      "type": "dto"
+    },
+    {
+      "slug": "post-database-tables",
+      "type": "endpoint"
+    }
+  ]
+}

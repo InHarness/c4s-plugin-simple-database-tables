@@ -1,0 +1,9 @@
+# claude4spec (auto-added)
+.claude4spec/mcp.json
+*.deprecated
+
+# plugin build (scaffold)
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store

@@ -1,0 +1,17 @@
+{
+  "description": "Returns the full DatabaseTableSnapshot for the given slug, or 404 if not found. Path relative to pathPrefix.",
+  "linked_dtos": [
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "response",
+      "status_code": 200
+    }
+  ],
+  "method": "GET",
+  "path": "/database-tables/:slug",
+  "slug": "get-database-tables-slug",
+  "summary": "Get one database-table by slug",
+  "tags": [
+    "backend"
+  ]
+}

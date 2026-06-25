@@ -1,0 +1,30 @@
+{
+  "description": "Shape of one index inside database_table.indexes[].",
+  "examples": [],
+  "fields": [
+    {
+      "description": "Ordered list of column names covered by the index.",
+      "name": "columns",
+      "required": true,
+      "type": "string[]"
+    },
+    {
+      "description": "Whether the index enforces uniqueness.",
+      "name": "unique",
+      "required": false,
+      "type": "boolean"
+    },
+    {
+      "description": "Optional explicit index name; otherwise derived.",
+      "name": "name",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "name": "IndexSpec",
+  "slug": "index-spec",
+  "tags": [
+    "backend",
+    "entity-dto"
+  ]
+}

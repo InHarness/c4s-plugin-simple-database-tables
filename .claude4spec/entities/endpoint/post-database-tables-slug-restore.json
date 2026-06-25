@@ -1,0 +1,23 @@
+{
+  "description": "UPSERTs by slug from a DatabaseTableSnapshot, replacing columns[]/indexes[] and syncing tags. Used by L9 boot/file-watch and release restore flows. Response: DatabaseTableSnapshot.",
+  "linked_dtos": [
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "request",
+      "status_code": null
+    },
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "response",
+      "status_code": 200
+    }
+  ],
+  "method": "POST",
+  "path": "/database-tables/:slug/restore",
+  "slug": "post-database-tables-slug-restore",
+  "summary": "Restore a database-table from snapshot",
+  "tags": [
+    "backend",
+    "serialization"
+  ]
+}

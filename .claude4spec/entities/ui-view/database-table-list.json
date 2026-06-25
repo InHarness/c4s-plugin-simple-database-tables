@@ -1,0 +1,11 @@
+{
+  "description": "List view of database-table entities. Each row is rendered by the plugin's renderRow (pure React + host-resolver useGetBySlug): name + column-count badge + description. No routing (modal/drawer). The list header/container (EntityListHeader) is host territory; FrontendModule has no list-header slot.",
+  "designSystemSlug": null,
+  "name": "Database Table List",
+  "params": [],
+  "slug": "database-table-list",
+  "tags": [
+    "frontend"
+  ],
+  "url": null
+}

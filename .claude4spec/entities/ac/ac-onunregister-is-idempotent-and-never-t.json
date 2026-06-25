@@ -1,0 +1,11 @@
+{
+  "description": null,
+  "kind": "edge-case",
+  "slug": "ac-onunregister-is-idempotent-and-never-t",
+  "status": "active",
+  "tags": [
+    "backend"
+  ],
+  "text": "onUnregister() is idempotent and never throws, so hot-reload cannot break on teardown.",
+  "verifies": []
+}

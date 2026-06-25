@@ -1,0 +1,66 @@
+{
+  "description": "Shape of one column inside database_table.columns[]. Dialect-agnostic. fk is a soft reference — a non-existent target table produces warnings, never an error.",
+  "examples": [],
+  "fields": [
+    {
+      "description": "Column identifier (snake_case).",
+      "name": "name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Dialect-agnostic type (text, integer, json, boolean, timestamp, ...).",
+      "name": "type",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Whether the column accepts NULL. Defaults false.",
+      "name": "nullable",
+      "required": false,
+      "type": "boolean"
+    },
+    {
+      "description": "Whether a UNIQUE constraint applies.",
+      "name": "unique",
+      "required": false,
+      "type": "boolean"
+    },
+    {
+      "description": "Whether the column is part of the primary key.",
+      "name": "pk",
+      "required": false,
+      "type": "boolean"
+    },
+    {
+      "description": "Soft foreign key { table, column }. Dangling target → warning only.",
+      "name": "fk",
+      "required": false,
+      "type": "object"
+    },
+    {
+      "description": "Default value literal.",
+      "name": "default",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "description": "Allowed values when the column is an enumeration.",
+      "name": "enumValues",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "description": "Prose description of the column.",
+      "name": "description",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "name": "ColumnSpec",
+  "slug": "column-spec",
+  "tags": [
+    "backend",
+    "entity-dto"
+  ]
+}

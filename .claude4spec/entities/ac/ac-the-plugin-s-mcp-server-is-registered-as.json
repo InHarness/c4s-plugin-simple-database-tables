@@ -1,0 +1,11 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-the-plugin-s-mcp-server-is-registered-as",
+  "status": "active",
+  "tags": [
+    "backend"
+  ],
+  "text": "The plugin's MCP server is registered as a factory (() => createServer) rather than a shared instance.",
+  "verifies": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "color": "#2563EB",
+    "description": "Backend layers L1-L4 (schema, service, MCP, router)",
+    "name": "backend",
+    "slug": "backend"
+  },
+  {
+    "color": "#DB2777",
+    "description": "DTO shape contracts",
+    "name": "entity-dto",
+    "slug": "entity-dto"
+  },
+  {
+    "color": "#059669",
+    "description": "Frontend layers L5/L8 (list view, chips, detail panel)",
+    "name": "frontend",
+    "slug": "frontend"
+  },
+  {
+    "color": "#7C3AED",
+    "description": "M05 system-prompt requirement slot",
+    "name": "m05",
+    "slug": "m05"
+  },
+  {
+    "color": "#D97706",
+    "description": "L9 snapshot/restore/diff serialization",
+    "name": "serialization",
+    "slug": "serialization"
+  },
+  {
+    "color": "#0891B2",
+    "description": "Host UI Kit (L12/M34) consumption",
+    "name": "ui-kit",
+    "slug": "ui-kit"
+  }
+]

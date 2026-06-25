@@ -1,0 +1,22 @@
+{
+  "description": "Partial update of a database-table. Rename happens only via explicit newSlug, which triggers propagation of fk.table===oldSlug and M19 references. Response: DatabaseTableSnapshot.",
+  "linked_dtos": [
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "request",
+      "status_code": null
+    },
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "response",
+      "status_code": 200
+    }
+  ],
+  "method": "PATCH",
+  "path": "/database-tables/:slug",
+  "slug": "patch-database-tables-slug",
+  "summary": "Update a database-table",
+  "tags": [
+    "backend"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "description": "Trimmed row returned by the list endpoint. Derived/aggregated fields (columnCount, hasPrimaryKey) instead of the full columns[] payload, to keep list responses light.",
+  "examples": [],
+  "fields": [
+    {
+      "description": "Identity.",
+      "name": "slug",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Display name.",
+      "name": "name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "description": "Optional prose description.",
+      "name": "description",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "description": "Number of columns (columns.length).",
+      "name": "columnCount",
+      "required": true,
+      "type": "integer"
+    },
+    {
+      "description": "Whether any column has pk=true.",
+      "name": "hasPrimaryKey",
+      "required": true,
+      "type": "boolean"
+    },
+    {
+      "description": "Tag slugs attached to the entity.",
+      "name": "tags",
+      "required": false,
+      "type": "string[]"
+    }
+  ],
+  "name": "DatabaseTableListItem",
+  "slug": "database-table-list-item",
+  "tags": [
+    "entity-dto",
+    "frontend"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-chips-renderchip-rendercard-renderrow",
+  "status": "active",
+  "tags": [
+    "frontend"
+  ],
+  "text": "The list view's renderRow is pure-presentational, resolves data only through the host-injected useGetBySlug, and never calls useEditor().",
+  "verifies": [
+    {
+      "slug": "database-table-list",
+      "type": "ui-view"
+    }
+  ]
+}

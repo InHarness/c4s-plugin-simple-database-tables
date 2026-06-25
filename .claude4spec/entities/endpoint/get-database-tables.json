@@ -1,0 +1,17 @@
+{
+  "description": "Returns the trimmed list of database-table entities. Path is relative to pathPrefix; host prepends /api/projects/:id. Response: array of DatabaseTableListItem.",
+  "linked_dtos": [
+    {
+      "dto_slug": "database-table-list-item",
+      "relation": "response",
+      "status_code": 200
+    }
+  ],
+  "method": "GET",
+  "path": "/database-tables",
+  "slug": "get-database-tables",
+  "summary": "List database-table entities",
+  "tags": [
+    "backend"
+  ]
+}

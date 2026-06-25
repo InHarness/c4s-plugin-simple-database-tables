@@ -1,0 +1,20 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-a-rename-happens-only-via-an-explicit-ne",
+  "status": "active",
+  "tags": [
+    "backend"
+  ],
+  "text": "A rename happens only via an explicit newSlug and propagates to every fk.table===oldSlug and all M19 references.",
+  "verifies": [
+    {
+      "slug": "database-table",
+      "type": "database-table"
+    },
+    {
+      "slug": "patch-database-tables-slug",
+      "type": "endpoint"
+    }
+  ]
+}

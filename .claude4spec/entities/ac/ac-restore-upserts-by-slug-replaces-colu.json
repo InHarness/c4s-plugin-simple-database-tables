@@ -1,0 +1,20 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-restore-upserts-by-slug-replaces-colu",
+  "status": "active",
+  "tags": [
+    "serialization"
+  ],
+  "text": "restore() UPSERTs by slug, replaces columns[] and indexes[], and syncs the tag set from the snapshot.",
+  "verifies": [
+    {
+      "slug": "database-table-snapshot",
+      "type": "dto"
+    },
+    {
+      "slug": "post-database-tables-slug-restore",
+      "type": "endpoint"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "columns": [
+    {
+      "description": "Primary key. slugify(name); kebab-case. Renamed only via explicit newSlug.",
+      "name": "slug",
+      "nullable": false,
+      "pk": true,
+      "type": "text",
+      "unique": true
+    },
+    {
+      "description": "Human display name (snake_case table identifier, e.g. order_items).",
+      "name": "name",
+      "nullable": false,
+      "type": "text"
+    },
+    {
+      "description": "Optional prose description of the table.",
+      "name": "description",
+      "nullable": true,
+      "type": "text"
+    },
+    {
+      "default": "[]",
+      "description": "Array of ColumnSpec objects (name, type, nullable, unique, pk, fk, default, enumValues).",
+      "name": "columns",
+      "nullable": false,
+      "type": "json"
+    },
+    {
+      "default": "[]",
+      "description": "Array of IndexSpec objects (columns[], unique, name).",
+      "name": "indexes",
+      "nullable": false,
+      "type": "json"
+    },
+    {
+      "description": "ISO timestamp set at insert.",
+      "name": "created_at",
+      "nullable": false,
+      "type": "text"
+    },
+    {
+      "description": "ISO timestamp bumped on every UPDATE/restore.",
+      "name": "updated_at",
+      "nullable": false,
+      "type": "text"
+    }
+  ],
+  "description": "The single entity table contributed by the plugin. Stores one row per user-defined database-table entity. Mirrors the App Spec `database_table` model: slug PK, name, optional description, columns[]/indexes[] persisted as JSON, audit timestamps. Soft-FK only — no enforced foreign keys between rows.",
+  "indexes": [
+    {
+      "columns": [
+        "name"
+      ],
+      "name": "idx_database_table_name",
+      "unique": false
+    }
+  ],
+  "name": "database_table",
+  "slug": "database-table",
+  "tags": [
+    "backend",
+    "serialization"
+  ]
+}

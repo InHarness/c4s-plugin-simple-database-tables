@@ -1,0 +1,12 @@
+{
+  "description": "Detail panel (L5/L8 detailPanel slot) framed by the Host UI Kit: DetailPanelShell (frame + breadcrumb, no title prop — header is the last breadcrumb segment), FieldGrid + FieldRow (value as children, no value prop) for columns, indexes and tags. Data is self-fetched by the plugin via its registered useGetBySlug hook (the kit provides no data layer). Token bridge exposes design-system tokens as --c-* CSS vars. No routing (modal/drawer).",
+  "designSystemSlug": null,
+  "name": "Database Table Detail Panel",
+  "params": [],
+  "slug": "database-table-detail-panel",
+  "tags": [
+    "frontend",
+    "ui-kit"
+  ],
+  "url": null
+}

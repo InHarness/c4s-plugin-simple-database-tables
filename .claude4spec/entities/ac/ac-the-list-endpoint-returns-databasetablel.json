@@ -1,0 +1,21 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-the-list-endpoint-returns-databasetablel",
+  "status": "active",
+  "tags": [
+    "backend",
+    "frontend"
+  ],
+  "text": "The list endpoint returns DatabaseTableListItem rows with derived columnCount and hasPrimaryKey instead of full columns[].",
+  "verifies": [
+    {
+      "slug": "database-table-list-item",
+      "type": "dto"
+    },
+    {
+      "slug": "get-database-tables",
+      "type": "endpoint"
+    }
+  ]
+}

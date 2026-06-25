@@ -1,0 +1,20 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-a-new-table-slug-equals-slugify-name-a",
+  "status": "active",
+  "tags": [
+    "backend"
+  ],
+  "text": "A new table slug equals slugify(name), and the SQLite table is named database_table (not the SQL keyword table).",
+  "verifies": [
+    {
+      "slug": "database-table",
+      "type": "database-table"
+    },
+    {
+      "slug": "post-database-tables",
+      "type": "endpoint"
+    }
+  ]
+}

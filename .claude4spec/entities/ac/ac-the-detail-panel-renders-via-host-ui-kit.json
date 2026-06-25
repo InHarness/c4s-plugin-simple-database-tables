@@ -1,0 +1,17 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-the-detail-panel-renders-via-host-ui-kit",
+  "status": "active",
+  "tags": [
+    "frontend",
+    "ui-kit"
+  ],
+  "text": "The detail panel renders via Host UI Kit (DetailPanelShell/FieldGrid/FieldRow) and fetches its data with the plugin's own useGetBySlug; the /ui subpath is externalized in the Vite build.",
+  "verifies": [
+    {
+      "slug": "database-table-detail-panel",
+      "type": "ui-view"
+    }
+  ]
+}

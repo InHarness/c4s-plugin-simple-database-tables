@@ -1,0 +1,22 @@
+{
+  "description": "Creates a new database-table entity. slug = slugify(name). Soft-FK targets that do not exist are returned in warnings[], not errors. Response: DatabaseTableSnapshot.",
+  "linked_dtos": [
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "request",
+      "status_code": null
+    },
+    {
+      "dto_slug": "database-table-snapshot",
+      "relation": "response",
+      "status_code": 201
+    }
+  ],
+  "method": "POST",
+  "path": "/database-tables",
+  "slug": "post-database-tables",
+  "summary": "Create a database-table",
+  "tags": [
+    "backend"
+  ]
+}
