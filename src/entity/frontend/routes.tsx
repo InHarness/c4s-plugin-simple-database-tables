@@ -48,6 +48,7 @@ function DatabaseTablesListRoute() {
           {data.map((item) => (
             <DatabaseTableRow
               key={item.slug}
+              slug={item.slug}
               // The list endpoint is trimmed (columnCount, not columns) — give the
               // row a length-only columns array so its count badge renders.
               entity={

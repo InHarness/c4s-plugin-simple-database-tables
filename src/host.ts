@@ -5,12 +5,14 @@
  * The rest of the plugin imports types and values FROM HERE (`../host` / `./host`),
  * so when the specifier or the surface shape changes you fix it in one place.
  *
- * NOTE: `@c4s/plugin-runtime` is NOT a separate npm package. The backend gets it
+ * NOTE: `@c4s/plugin-runtime` is NOT a runtime npm package. The backend gets it
  * from the host process; the frontend gets it via an import-map shim
  * (`window.__c4s_shared`). The `/ui` subpath is a distinct specifier on the same
- * package — it must be externalized separately in vite.config.ts. Types are not
- * published — see `src/c4s-runtime.d.ts` (ambient fallback).
- * TODO: once the host publishes types/a package, delete `c4s-runtime.d.ts` and keep these re-exports.
+ * package — it must be externalized separately in vite.config.ts.
+ *
+ * Its TYPES are published by the host as `@inharness-ai/claude4spec/plugin-runtime`
+ * (+ `/ui`) and pulled in via `src/_host-types.d.ts` — no more vendored copy.
+ * Offline / older host? See `fallback/c4s-runtime.fallback.d.ts`.
  */
 
 // ─── Contract types (backend + cross-cutting) ───
