@@ -15,7 +15,7 @@ import { DatabaseTableEntity } from './plugin';
 
 export const manifest: PluginManifest = {
   // KEEP in sync with package.json "name".
-  name: 'c4s-plugin-simple-database-tables',
+  name: '@inharness-ai/c4s-plugin-simple-database-tables',
   version: '0.1.0',
   // Major-only compatibility gate against host 1.0.0 — `^1.0.0` satisfies 1.0.0.
   hostApiVersion: '^1.0.0',
