@@ -1,6 +1,6 @@
 {
   "name": "@inharness-ai/c4s-plugin-simple-database-tables",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "claude4spec plugin contributing the database-table entity (SQLite table database_table): columns, indexes, soft foreign keys; exposed over MCP, HTTP and React renderers.",
   "type": "module",
   "exports": {
