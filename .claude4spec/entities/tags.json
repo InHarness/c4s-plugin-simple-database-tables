@@ -24,6 +24,12 @@
     "slug": "m05"
   },
   {
+    "color": "#9333EA",
+    "description": "M33 L5-ui project-scoped fetch contract (window.__C4S_PROJECT__.id + /api/projects/<id> prefix)",
+    "name": "project-scoped-fetch",
+    "slug": "project-scoped-fetch"
+  },
+  {
     "color": "#D97706",
     "description": "L9 snapshot/restore/diff serialization",
     "name": "serialization",

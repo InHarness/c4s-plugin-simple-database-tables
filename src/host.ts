@@ -63,15 +63,19 @@ export {
 
 // ─── Host UI Kit (L8) — @c4s/plugin-runtime/ui ───
 // Pure-presentational components composed in the entity view; the plugin still
-// fetches the data. These four are the `stable` core (counted into hostApiVersion).
-// Experimental components (Badge, LoadingState, EntityListLayout, Pagination,
-// EmptyState, FormField, InlineEditField, ActionButton) ship from the same subpath
-// but are opt-in and OUTSIDE hostApiVersion — re-export them here when you adopt one.
+// fetches the data. The first four are the `stable` core (counted into hostApiVersion).
+// `EntityListRow` and `TagFilterBar` are EXPERIMENTAL-tier (OUTSIDE hostApiVersion):
+// the list view adopts them deliberately, accepting that their props may change
+// without a major host bump. Other experimental components (Badge — consumed
+// internally by TagFilterBar — LoadingState, EntityListLayout, Pagination, etc.)
+// ship from the same subpath; re-export them here when you adopt one.
 export {
   DetailPanelShell,
   FieldGrid,
   FieldRow,
   EntityListHeader,
+  EntityListRow,
+  TagFilterBar,
 } from '@c4s/plugin-runtime/ui';
 export type {
   DetailPanelShellProps,
@@ -79,4 +83,7 @@ export type {
   FieldGridProps,
   FieldRowProps,
   EntityListHeaderProps,
+  EntityListRowProps,
+  TagBarProps,
+  Tag,
 } from '@c4s/plugin-runtime/ui';

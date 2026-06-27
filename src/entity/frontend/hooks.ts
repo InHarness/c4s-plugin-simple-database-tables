@@ -4,9 +4,15 @@
  * `QueryClient` (one fetch per slug, shared cache).
  *
  * NOTE: the backend router is mounted under `/api/projects/:id/database-tables`. The
- * client-side project id is host-specific; we read it from a host-provided global
- * (`window.__c4s_projectId`) and fall back to a relative path. See the
- * `frontend-fetch-prefix` patch in `.claude4spec/patches/`.
+ * client reads the project id from the host's server-injected global
+ * `window.__C4S_PROJECT__.id` (M31 — the same source the host's own `apiFetch` uses).
+ *
+ * Project-scoped fetch is MANDATORY (M33 / L5-ui): every data fetch MUST carry the
+ * `/api/projects/<id>` prefix. The host auto-applies a basepath only to client
+ * NAVIGATION — it does NOT prefix data fetches, so the plugin composes the URL itself.
+ * A bare `/api/...` request resolves to 404 (a loud failure, never a silent
+ * degradation), so we never emit one: when the global is absent the id falls back to
+ * the literal `'default'`, keeping the prefix intact.
  */
 
 import { useQuery } from '@tanstack/react-query';
@@ -15,10 +21,10 @@ import type { DatabaseTableListItem, DatabaseTableSnapshot } from '../dto';
 
 function apiBase(): string {
   const pid =
-    typeof window !== 'undefined'
-      ? (window as unknown as { __c4s_projectId?: string }).__c4s_projectId
-      : undefined;
-  return pid ? `/api/projects/${pid}/database-tables` : `/api/database-tables`;
+    (typeof window !== 'undefined'
+      ? (window as unknown as { __C4S_PROJECT__?: { id?: string } }).__C4S_PROJECT__?.id
+      : undefined) ?? 'default';
+  return `/api/projects/${pid}/database-tables`;
 }
 
 export function useDatabaseTableBySlug(slug: string | null): {

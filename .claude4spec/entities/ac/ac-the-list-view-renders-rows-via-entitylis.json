@@ -1,0 +1,17 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-the-list-view-renders-rows-via-entitylis",
+  "status": "active",
+  "tags": [
+    "frontend",
+    "ui-kit"
+  ],
+  "text": "The list view renders rows via EntityListRow, offers a tag filter via TagFilterBar, and renders the result count through the count prop on EntityListHeader.",
+  "verifies": [
+    {
+      "slug": "database-table-list",
+      "type": "ui-view"
+    }
+  ]
+}

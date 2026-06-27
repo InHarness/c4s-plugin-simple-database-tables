@@ -41,6 +41,8 @@ effective full path is `/api/projects/:id/database-tables/...`.
 | L3 | MCP server (5 CRUD tools, factory) | backend |
 | L4 | Express Router (CRUD + restore) | backend |
 | L5 / L8 | List view, chips, detail panel (Host UI Kit) | frontend |
+| L5-ui | Project-scoped fetch (M33) — `/api/projects/<id>/...` from `window.__C4S_PROJECT__.id` | frontend |
+| L12 | Host UI Kit components (M34) — `EntityListHeader`/`DetailPanelShell` stable, `TagFilterBar`/`EntityListRow` experimental | frontend |
 | L9 | snapshot / restore / diff | serialization |
 | M05 | System-prompt requirement | identity-and-manifest |
 

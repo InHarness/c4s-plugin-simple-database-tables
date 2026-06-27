@@ -1,0 +1,20 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-rendercard-and-renderrow-style-themselve",
+  "status": "active",
+  "tags": [
+    "frontend"
+  ],
+  "text": "renderCard and renderRow style themselves with the host token-bridge --c-* CSS vars (e.g. var(--c-bg), var(--c-fg), var(--c-muted), var(--c-border)) rather than emitting unstyled bare markup, so single_element embeds are not rendered naked in the host.",
+  "verifies": [
+    {
+      "slug": "database-table-detail-panel",
+      "type": "ui-view"
+    },
+    {
+      "slug": "database-table-list",
+      "type": "ui-view"
+    }
+  ]
+}
