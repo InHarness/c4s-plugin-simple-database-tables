@@ -1,5 +1,5 @@
 {
-  "description": "List view of database-table entities. Each row is rendered by the plugin's renderRow (pure React + host-resolver useGetBySlug): name + column-count badge + description. No routing (modal/drawer). The list header/container (EntityListHeader) is host territory; FrontendModule has no list-header slot.",
+  "description": "List view of database-table entities. Rows are rendered by the plugin's renderRow via the Host UI Kit EntityListRow (pure React + host-resolver useGetBySlug): title=name, meta=column count, subtitle=description. The plugin's own frontend.routes list route composes EntityListHeader (with the 'count' prop for the N-results counter) -> search -> TagFilterBar (tag chips via Badge) -> EntityListRow. FrontendModule has no list-header slot, so EntityListHeader is never inside renderRow. EntityListRow/TagFilterBar are experimental-tier kit components (opt-in). Data fetch must be project-scoped: /api/projects/<id>/database-tables/... from window.__C4S_PROJECT__.id. No routing (modal/drawer).",
   "designSystemSlug": null,
   "name": "Database Table List",
   "params": [],

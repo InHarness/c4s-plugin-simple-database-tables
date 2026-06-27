@@ -265,7 +265,7 @@ declare module '@c4s/plugin-runtime' {
  * their declarations here if/when you import them.
  */
 declare module '@c4s/plugin-runtime/ui' {
-  import type { ComponentType, ReactNode } from 'react';
+  import type { ComponentType, ReactNode, CSSProperties } from 'react';
 
   export interface DetailBreadcrumb {
     label: ReactNode;
@@ -303,4 +303,44 @@ declare module '@c4s/plugin-runtime/ui' {
     actions?: ReactNode;
   }
   export const EntityListHeader: ComponentType<EntityListHeaderProps>;
+
+  // ── Experimental-tier components (OUTSIDE hostApiVersion) ──
+  // Props may change WITHOUT a major host bump — adopting them accepts an unstable
+  // contract. Shapes mirror the host source `src/client/host-ui-kit/list/*` and the
+  // `Tag` type from `src/shared/entities.ts`.
+
+  /** Host tag record (slug + display metadata + per-type counts). */
+  export interface Tag {
+    slug: string;
+    name: string;
+    color: string | null;
+    description: string | null;
+    /** Per-entity-type counts. Keys are plugin types; absent type = 0. */
+    counts: Record<string, number>;
+    createdAt: string;
+    updatedAt: string;
+  }
+
+  export interface EntityListRowProps {
+    leading: ReactNode;
+    onClick: () => void;
+    /** Tag slugs to render as chips; resolved through `tagLookup`. */
+    tags?: string[];
+    tagLookup: Map<string, Tag>;
+    trailing?: ReactNode;
+    align?: 'center' | 'start';
+    style?: CSSProperties;
+    children: ReactNode;
+  }
+  export const EntityListRow: ComponentType<EntityListRowProps>;
+
+  export interface TagBarProps {
+    tags: Tag[];
+    tagFilter: string[];
+    onTagToggle: (slug: string) => void;
+    tagMode: 'and' | 'or';
+    onToggleMode: () => void;
+    onClear: () => void;
+  }
+  export const TagFilterBar: ComponentType<TagBarProps>;
 }

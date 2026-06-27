@@ -1,0 +1,12 @@
+{
+  "description": null,
+  "kind": "edge-case",
+  "slug": "ac-a-plugin-backend-call-made-without-the",
+  "status": "active",
+  "tags": [
+    "backend",
+    "frontend"
+  ],
+  "text": "A plugin backend call made without the /api/projects/<id> prefix returns 404 — a loud failure, never a silent degradation.",
+  "verifies": []
+}

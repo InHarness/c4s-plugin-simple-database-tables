@@ -1,0 +1,21 @@
+{
+  "description": null,
+  "kind": "requirement",
+  "slug": "ac-the-frontend-database-tables-module-read",
+  "status": "active",
+  "tags": [
+    "frontend",
+    "project-scoped-fetch"
+  ],
+  "text": "The frontend database-tables module reads the project id from window.__C4S_PROJECT__.id and prefixes every project-scoped fetch as /api/projects/<id>/database-tables/...",
+  "verifies": [
+    {
+      "slug": "database-table-detail-panel",
+      "type": "ui-view"
+    },
+    {
+      "slug": "database-table-list",
+      "type": "ui-view"
+    }
+  ]
+}
